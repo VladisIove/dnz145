@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    {{ block.super }} {{ post.name }}
+{% endblock %}
+
+{% block style %}
+    {{ block.super }}
+    <style>
+        .img-file{
+            width: 30px;
+            height: 30px;
+            margin: 0 auto;
+        }
+
+        .file-link{
+            display: flex;
+            display: -webkit-flex; 
+            -webkit-flex-direction: row-reverse;
+            flex-direction: column;
+            min-width: 5%;
+            max-width: 10%;
+            margin-left: 2%;
+            text-align: center;
+        }
+
+        .file-container{
+            display: flex;
+            flex-direction: row;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+    <p class="text-center h3 m-3">{{ post.name }} </p>
+    <div class="m-3">{{ post.text | safe }} </div>
+    <div class="m-3 file-container">
+        {% for file in post.files.all %}
+            {% if file.active %}
+                <a href="{{ file.file_link.url }}" target="_blank" class="file-link">
+                    <img src="{% static 'file.jpg' %}" alt="File" class="img-file">
+                    <span>{{ file.name }}</span>
+                </a>
+            {% endif %}
+        {% endfor %}
+    </div>
+    <p class="float-right">{{ post.last_update | date:"H:i d:m:Y" }} </p>
+{% endblock %}

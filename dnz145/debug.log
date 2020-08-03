@@ -1,0 +1,103 @@
+(0.003) SELECT "topics"."name", "topics"."slug" FROM "topics" WHERE "topics"."active" = true ORDER BY "topics"."id" ASC; args=(True,)
+Exception while resolving variable 'active_topic' in template 'home.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 828, in _resolve_lookup
+    current = current[bit]
+  File "/usr/local/lib/python3.8/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'active_topic'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 834, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'active_topic'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 842, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'active_topic'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 847, in _resolve_lookup
+    raise VariableDoesNotExist("Failed lookup for key "
+django.template.base.VariableDoesNotExist: Failed lookup for key [active_topic] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x7f0a37d0e550>>, 'request': <WSGIRequest: GET '/'>, 'user': <SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x7f0a397c9940>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7f0a37c768b0>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f0a37d49940>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'view': <posts.views.HomePageView object at 0x7f0a37d5efd0>, 'topics': <QuerySet [{'name': 'rrrrrr', 'slug': 'rrrrrr'}]>}, {'forloop': {'parentloop': {}, 'counter0': 0, 'counter': 1, 'revcounter': 1, 'revcounter0': 0, 'first': True, 'last': True}, 'topic': {'name': 'rrrrrr', 'slug': 'rrrrrr'}}]
+Not Found: /static/logo.png
+(0.003) SELECT "topics"."name", "topics"."slug" FROM "topics" WHERE "topics"."active" = true ORDER BY "topics"."id" ASC; args=(True,)
+Exception while resolving variable 'active_topic' in template 'home.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 828, in _resolve_lookup
+    current = current[bit]
+  File "/usr/local/lib/python3.8/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'active_topic'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 834, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'active_topic'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 842, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'active_topic'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 847, in _resolve_lookup
+    raise VariableDoesNotExist("Failed lookup for key "
+django.template.base.VariableDoesNotExist: Failed lookup for key [active_topic] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x7f0a37d0e550>>, 'request': <WSGIRequest: GET '/'>, 'user': <SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x7f0a397c9940>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7f0a37c77940>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f0a37d489d0>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'view': <posts.views.HomePageView object at 0x7f0a37d48a00>, 'topics': <QuerySet [{'name': 'rrrrrr', 'slug': 'rrrrrr'}]>}, {'forloop': {'parentloop': {}, 'counter0': 0, 'counter': 1, 'revcounter': 1, 'revcounter0': 0, 'first': True, 'last': True}, 'topic': {'name': 'rrrrrr', 'slug': 'rrrrrr'}}]
+Not Found: /static/logo.png
+(0.462) SELECT "topics"."name", "topics"."slug" FROM "topics" WHERE "topics"."active" = true ORDER BY "topics"."id" ASC; args=(True,)
+Exception while resolving variable 'active_topic' in template 'home.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 828, in _resolve_lookup
+    current = current[bit]
+  File "/usr/local/lib/python3.8/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'active_topic'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 834, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'active_topic'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 842, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'active_topic'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 847, in _resolve_lookup
+    raise VariableDoesNotExist("Failed lookup for key "
+django.template.base.VariableDoesNotExist: Failed lookup for key [active_topic] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x7fdae564e550>>, 'request': <WSGIRequest: GET '/'>, 'user': <SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x7fdae7109940>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7fdae55b6940>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7fdae56889d0>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'view': <posts.views.HomePageView object at 0x7fdae5688a00>, 'topics': <QuerySet [{'name': 'rrrrrr', 'slug': 'rrrrrr'}]>}, {'forloop': {'parentloop': {}, 'counter0': 0, 'counter': 1, 'revcounter': 1, 'revcounter0': 0, 'first': True, 'last': True}, 'topic': {'name': 'rrrrrr', 'slug': 'rrrrrr'}}]
+(0.171) SELECT COUNT(*) AS "__count" FROM "posts" INNER JOIN "topics" ON ("posts"."topic_id" = "topics"."id") WHERE ("posts"."active" = true AND "topics"."slug" = 'rrrrrr'); args=(True, 'rrrrrr')
+(0.002) SELECT "topics"."name" FROM "topics" WHERE ("topics"."active" = true AND "topics"."slug" = 'rrrrrr') ORDER BY "topics"."name" ASC; args=(True, 'rrrrrr')
+(0.004) SELECT "posts"."id", "posts"."topic_id", "posts"."name", "posts"."text", "posts"."last_update", "posts"."slug", "posts"."active" FROM "posts" INNER JOIN "topics" ON ("posts"."topic_id" = "topics"."id") WHERE ("posts"."active" = true AND "topics"."slug" = 'rrrrrr') ORDER BY "posts"."last_update" ASC LIMIT 1; args=(True, 'rrrrrr')
+(0.002) SELECT "posts"."id", "posts"."topic_id", "posts"."name", "posts"."text", "posts"."last_update", "posts"."slug", "posts"."active" FROM "posts" INNER JOIN "topics" ON ("posts"."topic_id" = "topics"."id") WHERE ("posts"."active" = true AND "topics"."slug" = 'rrrrrr') ORDER BY "posts"."last_update" ASC LIMIT 1; args=(True, 'rrrrrr')
+(0.003) SELECT "topics"."name", "topics"."slug" FROM "topics" WHERE "topics"."active" = true ORDER BY "topics"."id" ASC LIMIT 21; args=(True,)
+(0.001) SELECT "topics"."name", "topics"."slug" FROM "topics" WHERE "topics"."active" = true ORDER BY "topics"."id" ASC; args=(True,)
+(0.001) SELECT "posts"."id", "posts"."topic_id", "posts"."name", "posts"."text", "posts"."last_update", "posts"."slug", "posts"."active" FROM "posts" INNER JOIN "topics" ON ("posts"."topic_id" = "topics"."id") WHERE ("posts"."active" = true AND "topics"."slug" = 'rrrrrr') ORDER BY "posts"."last_update" ASC LIMIT 1; args=(True, 'rrrrrr')
+(0.004) SELECT COUNT(*) AS "__count" FROM "posts" INNER JOIN "topics" ON ("posts"."topic_id" = "topics"."id") WHERE ("posts"."active" = true AND "topics"."slug" = 'rrrrrr'); args=(True, 'rrrrrr')
+(0.001) SELECT "topics"."name" FROM "topics" WHERE ("topics"."active" = true AND "topics"."slug" = 'rrrrrr') ORDER BY "topics"."name" ASC; args=(True, 'rrrrrr')
+(0.002) SELECT "posts"."id", "posts"."topic_id", "posts"."name", "posts"."text", "posts"."last_update", "posts"."slug", "posts"."active" FROM "posts" INNER JOIN "topics" ON ("posts"."topic_id" = "topics"."id") WHERE ("posts"."active" = true AND "topics"."slug" = 'rrrrrr') ORDER BY "posts"."last_update" ASC LIMIT 1; args=(True, 'rrrrrr')
+(0.001) SELECT "posts"."id", "posts"."topic_id", "posts"."name", "posts"."text", "posts"."last_update", "posts"."slug", "posts"."active" FROM "posts" INNER JOIN "topics" ON ("posts"."topic_id" = "topics"."id") WHERE ("posts"."active" = true AND "topics"."slug" = 'rrrrrr') ORDER BY "posts"."last_update" ASC LIMIT 1; args=(True, 'rrrrrr')
+(0.002) SELECT "topics"."name", "topics"."slug" FROM "topics" WHERE "topics"."active" = true ORDER BY "topics"."id" ASC LIMIT 21; args=(True,)
+(0.001) SELECT "topics"."name", "topics"."slug" FROM "topics" WHERE "topics"."active" = true ORDER BY "topics"."id" ASC; args=(True,)
+(0.001) SELECT "posts"."id", "posts"."topic_id", "posts"."name", "posts"."text", "posts"."last_update", "posts"."slug", "posts"."active" FROM "posts" INNER JOIN "topics" ON ("posts"."topic_id" = "topics"."id") WHERE ("posts"."active" = true AND "topics"."slug" = 'rrrrrr') ORDER BY "posts"."last_update" ASC LIMIT 1; args=(True, 'rrrrrr')

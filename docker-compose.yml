@@ -1,0 +1,48 @@
+version: '3'
+services:
+
+  postgres:
+    container_name: postgres
+    image: postgres:12.3     
+    env_file: 
+      - ./misc/db
+    ports:
+      - 5432:5432
+    volumes: 
+      - postgres:/var/lib/postgresql/10/main    
+
+  back:
+    build: 
+      context: .
+      dockerfile: dnz145/Dockerfile
+    volumes:
+      - ./dnz145:/app
+      - static_files:/static_files
+    container_name: back
+    command: gunicorn -c gunicorn.conf.py dnz145.wsgi
+    env_file: 
+      - ./misc/db
+      - ./misc/django_conf
+    restart: unless-stopped
+    depends_on:
+      - postgres
+
+
+  nginx:
+    build: 
+      context: .
+      dockerfile: nginx/Dockerfile
+    container_name: nginx
+    volumes: 
+      - static_files:/static_files
+    ports: 
+      - 80:80
+    depends_on: 
+      - back
+    env_file: 
+      - ./misc/nginx_conf
+
+volumes: 
+  postgres:
+  static_files:
+

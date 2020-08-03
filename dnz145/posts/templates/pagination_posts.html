@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ block.super }} {{ topic }}
+{% endblock %}
+
+{% block style %}
+    {{ block.super }} 
+
+    <style>
+        .custom-link {
+            color: rgba(36, 142, 166,1);
+        }
+
+        .custom-link:hover {
+            color: rgba(36, 142, 166, 0.7);
+        }
+
+        .post-row{
+            background-color: rgba(255, 255, 255, 0.1) ;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+
+    <p class="h3 my-3 text-center">{{topic}}</p>
+    
+    <ul class="list-group list-group-flush ">
+        {% for post in posts_list %}
+        <li class="list-group-item row post-row"><span >  {{post.name}}</span>  <a href="{% url 'post:post_detail' active_topic post.slug %}" class="btn btn-link float-right custom-link">Подробнее</a></li>
+        {% endfor %}
+      </ul>
+
+    {% if is_paginated %} 
+    <ul class="pagination">
+    {% if page_obj.has_previous %}
+        <li>
+            <span><a href="?page={{ page_obj.previous_page_number }}">Попередня</a></span>
+        </li>
+    {% endif %}
+        <li class="">
+            <span>Сторінка {{ page_obj.number }} із {{ page_obj.paginator.num_pages }}.</span>
+        </li>
+    {% if page_obj.has_next %}
+        <li>
+            <span><a href="?page={{ page_obj.next_page_number }}">Наступна</a></span>
+        </li>
+    {% endif %}
+    </ul>
+
+    {% endif %}
+
+{% endblock %}
