@@ -63,9 +63,9 @@
         </div>
         <div class="col-6 offset-2 mt-5">
             <p style=" font-size: 20px; ">
-                Заклад дошкільної освіти (ясла - садок)<br/>
-                комбінованого типу № 145 «Дружна сімейка»<br/>
-                Запорізької міської ради Запорізької області
+                ЗАКЛАД ДОШКІЛЬНОЇ ОСВІТИ (ЯСЛА-САДОК)<br/>
+                КОМБІНОВАНОГО ТИПУ № 145 &quot;ДРУЖНА СІМЕЙКА&quot;<br/>
+                ЗАПОРІЗЬКОЇ МІСЬКОЇ РАДИ<br/>
             </p>
 
         </div>
@@ -79,7 +79,7 @@
                 {% for topic in topics %}
                 <a href="{% url 'post:posts' topic.slug %}"
                     class="list-group-item list-group-item-action list-group-custom {% if active_topic == topic.slug %} active active-custom {% endif %}">{{topic.name}}</a>
-                {% endfor %}
+                {% endfor %} 
             </div>
             <div class="col-9 content pb-5">
 
