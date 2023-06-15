@@ -9,7 +9,7 @@ services:
     ports:
       - 5432:5432
     volumes: 
-      - postgres:/var/lib/postgresql/10/main    
+      - ./postgres-data:/var/lib/postgresql/data
 
   back:
     build: 
