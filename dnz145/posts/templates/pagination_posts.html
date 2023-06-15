@@ -28,7 +28,7 @@
     
     <ul class="list-group list-group-flush ">
         {% for post in posts_list %}
-        <li class="list-group-item row post-row"><span >  {{post.name}}</span>  <a href="{% url 'post:post_detail' active_topic post.slug %}" class="btn btn-link float-right custom-link">Подробнее</a></li>
+        <li class="list-group-item row post-row"><span >  {{post.name}}</span>  <a href="{% url 'post:post_detail' active_topic post.slug %}" class="btn btn-link float-right custom-link">Детальніше</a></li>
         {% endfor %}
       </ul>
 
