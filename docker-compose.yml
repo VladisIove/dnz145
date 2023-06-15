@@ -3,7 +3,7 @@ services:
 
   postgres:
     container_name: postgres
-    image: postgres:12.3     
+    image: postgres:10     
     env_file: 
       - ./misc/db
     ports:
