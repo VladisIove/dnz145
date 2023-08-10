@@ -17,7 +17,7 @@ class HomePageView(TemplateView):
 
 class PostPaginationView(ListView):
     template_name = 'pagination_posts.html'
-    paginate_by = 3
+    paginate_by = 30
     model = Post
     context_object_name = 'posts_list'
 

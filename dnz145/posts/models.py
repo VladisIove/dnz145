@@ -4,7 +4,7 @@ import os
 from django.db import models
 from django.conf import settings
 from django.dispatch import receiver
-from ckeditor.fields import RichTextField
+from ckeditor_uploader.fields import RichTextUploadingField
 
 def get_file_path(instance, filename):
     ext = filename.split('.')[-1]
@@ -37,7 +37,7 @@ class Post(models.Model):
                                 help_text='Тема посту', verbose_name='Оберіть тему посту к якій відносится пост')
     name = models.CharField(max_length=2000, null=True, blank=True, unique=False, 
                                     help_text='Впішить назву даного посту', verbose_name='Назва поста')
-    text = RichTextField(verbose_name='Текс для посту', 
+    text = RichTextUploadingField(verbose_name='Текс для посту', 
                         help_text='Відкерактуйте текст, так Ви бажаєте щоб він виглядав на сайті')
     last_update = models.DateTimeField(auto_now=True, verbose_name='Част останнього редагування')
     slug = models.SlugField(null=False, blank=False, unique=True, help_text='Чипати у виподку інформування', verbose_name='Слаг')

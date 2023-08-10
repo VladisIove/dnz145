@@ -16,5 +16,5 @@ docker-compose up --build
 Go into container "back" and do commands ( docker exec -it back sh ):
 1. python manage.py makemigrations
 2. python manage.py migrate
-3. pythin manage.py collectstatic --noinput
+3. python manage.py collectstatic --noinput
 4. python manage.py createsuperuser
